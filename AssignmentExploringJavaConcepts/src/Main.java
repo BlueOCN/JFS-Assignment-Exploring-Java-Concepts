@@ -104,5 +104,55 @@ public class Main {
                 System.out.println("Invalid day");
                 break;
         }
+
+
+        //TIP Part 5: Basic Calculator
+        double num1, num2, result = 0;
+        char operation;
+
+        Scanner sc2 = new Scanner(System.in);
+
+        System.out.print("\nEnter first number: ");
+        num1 = sc.nextDouble();
+        System.out.print("Enter second number: ");
+        num2 = sc.nextDouble();
+        System.out.print("Enter the operation (+,-,*,/): ");
+        operation = sc2.next().charAt(0);
+
+        switch (operation) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            default:
+                System.out.println("Invalid operation");
+                break;
+        }
+        System.out.println(Double.toString(num1)+ " " + operation + " " +Double.toString(num2) + " = " + result);
+
+        System.out.print("Do you want to increment or decrement operations? [I/D] (Enter any other key to exit): ");
+        char option = Character.toUpperCase(sc2.next().charAt(0));
+
+        switch (option) {
+            case 'I':
+                System.out.print(result + "++ = ");
+                System.out.println(++result);
+                break;
+            case 'D' :
+                System.out.print(result + "-- = ");
+                System.out.println(--result);
+                break;
+            default:
+                System.out.println(result);
+                break;
+        }
     }
 }
