@@ -1,3 +1,5 @@
+import java.util.Scanner;   // Added for Part 3
+
 public class Main {
     public static void main(String[] args) {
         //TIP Part 1: Exploring Variables and Primitive Types
@@ -35,5 +37,27 @@ public class Main {
             counter--;
             System.out.println("Counter: " + counter);
         }
+
+        //TIP Part 3: Working with Strings and User Input
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("\nEnter first name: ");
+        String firstName = sc.nextLine();
+        System.out.print("Enter last name: ");
+        String lastName = sc.nextLine();
+
+        String fullName = firstName + " " + lastName;
+        String fullNameUpperCase = fullName.toUpperCase();
+        char firstChar = fullNameUpperCase.charAt(0);
+        int count = 0;
+        for (int i = 0; i < fullNameUpperCase.length(); i++) {
+            if (firstChar == fullNameUpperCase.charAt(i)){
+                count++;
+            }
+        }
+        System.out.println("Full Name: " + fullName);
+        System.out.println("Uppercase Full Name: " + fullNameUpperCase);
+        System.out.println("Number of times '" + firstChar + "' appears: " + count);
+
     }
 }
