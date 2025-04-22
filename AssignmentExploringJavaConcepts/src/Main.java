@@ -38,6 +38,7 @@ public class Main {
             System.out.println("Counter: " + counter);
         }
 
+
         //TIP Part 3: Working with Strings and User Input
         Scanner sc = new Scanner(System.in);
 
@@ -59,5 +60,49 @@ public class Main {
         System.out.println("Uppercase Full Name: " + fullNameUpperCase);
         System.out.println("Number of times '" + firstChar + "' appears: " + count);
 
+        //TIP Part 4: Using Conditionals, Logical Operators, and Switch Statements
+        int testScore1 = 70;
+        int testScore2 = 80;
+        int testScore3 = 90;
+        int averageScore = (testScore1 + testScore2 + testScore3)/3;
+        System.out.print("\nAverage score: " + averageScore + " --> ");
+
+        if (averageScore < 50) {
+            System.out.println("Poor");
+        } else if (averageScore < 70) {
+            System.out.println("Average");
+        } else if (averageScore < 90) {
+            System.out.println("Good");
+        } else {
+            System.out.println("Excellent");
+        }
+
+        int day = 1;
+        switch (day){
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+                break;
+        }
     }
 }
